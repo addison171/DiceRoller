@@ -1,0 +1,10 @@
+CC=gcc
+
+dice: main.o
+	$(CC) -o dice main.o -lsense -lm
+
+main.o: main.c
+	$(CC) -c main.c
+
+clean:
+	rm*.o dice
